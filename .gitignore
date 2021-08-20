@@ -1,0 +1,14 @@
+.idea
+.phpstorm.meta.php
+.phpunit.result.cache
+clover.xml
+coverage.xml
+_ide_helper.php
+composer.lock
+build
+vendor
+.DS_Store
+.lock
+node_modules
+package-lock.json
+logs
