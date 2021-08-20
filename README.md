@@ -12,7 +12,7 @@ $ composer require blade-components/responsive
 
 ## Usage
 
-Simple to use. For example, show content only on desktop:
+For example, show content only on desktop:
 
 ```blade
 <x-device desktop="true">
