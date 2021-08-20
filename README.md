@@ -6,7 +6,7 @@ Easily hide or show content depending on the user's device.
 
 You can install the package via composer:
 
-```bash
+```php
 $ composer require blade-components/responsive
 ```
 
