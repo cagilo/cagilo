@@ -1,0 +1,55 @@
+{
+    "name": "blade-components/responsive",
+    "description": "Easily hide or show content depending on the user's device.",
+    "keywords": [
+        "blade-components",
+        "laravel",
+        "responsive"
+    ],
+    "homepage": "https://github.com/blade-components/responsive",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandr Chernyaev",
+            "email": "bliz48rus@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^8.87",
+        "jenssegers/agent": "^2.6"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.15",
+        "phpunit/phpunit": "^9.3",
+        "vimeo/psalm": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "BladeComponents\\Responsive\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BladeComponents\\Responsive\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "./vendor/bin/testbench package:test --parallel --no-coverage",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BladeComponents\\Responsive\\ResponsiveServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
