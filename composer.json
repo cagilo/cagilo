@@ -21,7 +21,6 @@
         "jenssegers/agent": "^2.6"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.15",
         "phpunit/phpunit": "^9.3",
         "vimeo/psalm": "^4.8"
     },
