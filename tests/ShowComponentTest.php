@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace BladeComponents\Responsive\Tests;
+namespace EmmyBlade\Responsive\Tests;
 
-use BladeComponents\Responsive\DeviceComponent;
+use EmmyBlade\Responsive\DeviceComponent;
 use PHPUnit\Framework\TestCase;
 use Jenssegers\Agent\Agent;
 

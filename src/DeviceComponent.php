@@ -1,6 +1,6 @@
 <?php
 
-namespace BladeComponents\Responsive;
+namespace EmmyBlade\Responsive;
 
 use Illuminate\View\Component;
 use Jenssegers\Agent\Agent;

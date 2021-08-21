@@ -1,12 +1,12 @@
 {
-    "name": "blade-components/responsive",
+    "name": "emmyblade/responsive",
     "description": "Easily hide or show content depending on the user's device.",
     "keywords": [
         "blade-components",
         "laravel",
         "responsive"
     ],
-    "homepage": "https://github.com/blade-components/responsive",
+    "homepage": "https://github.com/emmyblade/responsive",
     "license": "MIT",
     "authors": [
         {
@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BladeComponents\\Responsive\\": "src"
+            "EmmyBlade\\Responsive\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BladeComponents\\Responsive\\Tests\\": "tests"
+            "EmmyBlade\\Responsive\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -48,7 +48,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "BladeComponents\\Responsive\\ResponsiveServiceProvider"
+                "EmmyBlade\\Responsive\\ResponsiveServiceProvider"
             ]
         }
     },

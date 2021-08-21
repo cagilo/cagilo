@@ -1,6 +1,6 @@
 <?php
 
-namespace BladeComponents\Responsive;
+namespace EmmyBlade\Responsive;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
