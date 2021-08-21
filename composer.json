@@ -20,6 +20,9 @@
         "laravel/framework": "^8.87",
         "jenssegers/agent": "^2.6"
     },
+    "conflict": {
+        "jenssegers/agent": "<2.6.4"
+    },
     "require-dev": {
         "phpunit/phpunit": "^9.3",
         "vimeo/psalm": "^4.8"
