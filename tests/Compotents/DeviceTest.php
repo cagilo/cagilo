@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace EmmyBlade\Responsive\Tests;
+namespace Cagilo\Responsive\Tests;
 
-use EmmyBlade\Responsive\DeviceComponent;
+use Cagilo\Responsive\Device;
 use PHPUnit\Framework\TestCase;
 use Jenssegers\Agent\Agent;
 
-class ShowComponentTest extends TestCase
+class DeviceTest extends TestCase
 {
 
     /**
@@ -34,7 +34,7 @@ class ShowComponentTest extends TestCase
 
         $agent->setUserAgent($userAgent);
 
-        return (new DeviceComponent($agent, $desktop, $phone, $tablet, $robot, $other))->shouldRender();
+        return (new Device($agent, $desktop, $phone, $tablet, $robot, $other))->shouldRender();
     }
 
     public function testRobot(): void

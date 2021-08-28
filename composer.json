@@ -1,12 +1,12 @@
 {
-    "name": "emmyblade/responsive",
-    "description": "Easily hide or show content depending on the user's device.",
+    "name": "cagilo/ui",
+    "description": "",
     "keywords": [
         "blade-components",
         "laravel",
-        "responsive"
+        "ui"
     ],
-    "homepage": "https://github.com/emmyblade/responsive",
+    "homepage": "https://github.com/cagilo/ui",
     "license": "MIT",
     "authors": [
         {
@@ -25,16 +25,17 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^9.3",
-        "vimeo/psalm": "^4.8"
+        "vimeo/psalm": "^4.8",
+        "orchestra/testbench-core": "^6.2"
     },
     "autoload": {
         "psr-4": {
-            "EmmyBlade\\Responsive\\": "src"
+            "Cagilo\\UI\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "EmmyBlade\\Responsive\\Tests\\": "tests"
+            "Cagilo\\UI\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -48,7 +49,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "EmmyBlade\\Responsive\\ResponsiveServiceProvider"
+              "CagiloServiceProvider"
             ]
         }
     },

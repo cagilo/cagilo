@@ -1,11 +1,13 @@
 <?php
 
-namespace EmmyBlade\Responsive;
+declare(strict_types=1);
+
+namespace Cagilo\UI\Components;
 
 use Illuminate\View\Component;
 use Jenssegers\Agent\Agent;
 
-class DeviceComponent extends Component
+class Device extends Component
 {
     /**
      * @var Agent
