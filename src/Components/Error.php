@@ -35,7 +35,7 @@ class Error extends Component
      */
     public function render(): View
     {
-        return view('blade-ui-kit::components.forms.error');
+        return view('cagilo::error');
     }
 
     /**

@@ -55,6 +55,6 @@ class Meta extends Component
 
     public function render(): View
     {
-        return view('blade-ui-kit::components.layouts.social-meta');
+        return view('cagilo::meta');
     }
 }

@@ -18,6 +18,7 @@ return [
     'components' => [
         'alert'  => Components\Alert::class,
         'avatar' => Components\Avatar::class,
+        'device' => Components\Device::class,
         'error'  => Components\Error::class,
         'logout' => Components\Logout::class,
         'meta'   => Components\Meta::class,

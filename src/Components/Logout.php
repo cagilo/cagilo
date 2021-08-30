@@ -6,6 +6,7 @@ namespace Cagilo\UI\Components;
 
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Route;
 
 class Logout extends Component
 {
@@ -20,9 +21,9 @@ class Logout extends Component
     /**
      * @param string $action
      */
-    public function __construct(string $action)
+    public function __construct(string $action = 'logout')
     {
-        $this->action = $action ?? route('logout');
+        $this->action = Route::has($action) ? route($action) : $action;
     }
 
     /**
@@ -30,6 +31,6 @@ class Logout extends Component
      */
     public function render(): View
     {
-        return view('cagilo::components.buttons.logout');
+        return view('cagilo::logout');
     }
 }

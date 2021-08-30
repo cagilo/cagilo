@@ -2,15 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Cagilo\Responsive\Tests;
+namespace Cagilo\UI\Tests\Compotents;
 
-use Cagilo\Responsive\Device;
-use PHPUnit\Framework\TestCase;
+use Cagilo\UI\Components\Device;
+use Cagilo\UI\Tests\ComponentTestCase;
 use Jenssegers\Agent\Agent;
 
-class DeviceTest extends TestCase
+class DeviceTest extends ComponentTestCase
 {
-
     /**
      * @param string $userAgent
      * @param bool   $desktop
