@@ -2,12 +2,6 @@
 
 Cagilo UI - a set of simple components for use in your views  Laravel Blade.
 
-- Alert
-- Avatar
-- Device
-- Error
-- Logout
-- Meta
 
 ## Installing Cagilo
 
@@ -19,6 +13,14 @@ To install, you need to run the following command in your Laravel project:
 $ composer require cagilo/ui
 ```
 
+## Usage
+
+- Alert
+- Avatar
+- Device
+- Error
+- Logout
+- Meta
 
 ## Getting Help & Contributing Back
 
@@ -26,6 +28,10 @@ Looking for the docs? Once you've read through the Handbook, consult the [Cagilo
 
 Find a bug? Head over to our [issue tracker](https://github.com/cagilo/ui/issues) and we'll do our best to help. We love pull requests, too!
 
+
+## Maintainers
+
+Cagilo is developed and maintained by [Alexandr Chernyaev](https://github.com/tabuna).
 
 ## License
 
