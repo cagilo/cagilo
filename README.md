@@ -12,7 +12,7 @@
 You can install the package via composer:
 
 ```php
-$ composer require blade-components/responsive
+$ composer require cagilo/ui
 ```
 
 
