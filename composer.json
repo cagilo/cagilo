@@ -1,5 +1,5 @@
 {
-    "name": "cagilo/ui",
+    "name": "cagilo/cagilo",
     "description": "",
     "keywords": [
         "blade-components",
@@ -21,7 +21,8 @@
         "jenssegers/agent": "^2.6"
     },
     "conflict": {
-        "jenssegers/agent": "<2.6.4"
+        "jenssegers/agent": "<2.6.4",
+        "orchestra/testbench-core": "<6.24.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.3",
