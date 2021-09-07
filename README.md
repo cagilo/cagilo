@@ -13,6 +13,11 @@ To install, you need to run the following command in your Laravel project:
 $ composer require cagilo/ui
 ```
 
+## Official Documentation
+
+Documentation for Cagilo can be found on its [website](https://cagilo.github.io/).
+
+
 ## Examples Of Using Components
 
 - Alert
