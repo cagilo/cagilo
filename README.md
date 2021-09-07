@@ -29,10 +29,7 @@ Documentation for Cagilo can be found on its [website](https://cagilo.github.io/
 
 ## Getting Help & Contributing Back
 
-Looking for the docs? Once you've read through the Handbook, consult the [Cagilo Reference](https://github.com/cagilo/ui) for details.
-
-Find a bug? Head over to our [issue tracker](https://github.com/cagilo/ui/issues) and we'll do our best to help. We love pull requests, too!
-
+Find a bug? Head over to our [issue tracker](https://github.com/cagilo/cagilo/issues) and we'll do our best to help. We love pull requests, too!
 
 ## Maintainers
 
