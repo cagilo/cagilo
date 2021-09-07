@@ -3,29 +3,10 @@
 Cagilo - a set of simple components for use in your views  Laravel Blade.
 
 
-## Installing Cagilo
-
-Cagilo is distributed through the [Composer](https://getcomposer.org/) package manager and automatically registers components in your application.
-
-To install, you need to run the following command in your Laravel project:
-
-```php
-$ composer require cagilo/ui
-```
-
 ## Official Documentation
 
 Documentation for Cagilo can be found on its [website](https://cagilo.github.io/).
 
-
-## Examples Of Using Components
-
-- Alert
-- Avatar
-- Device
-- Error
-- Logout
-- Meta
 
 ## Getting Help & Contributing Back
 
