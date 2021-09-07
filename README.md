@@ -1,6 +1,6 @@
-# Cagilo UI
+# Cagilo 
 
-Cagilo UI - a set of simple components for use in your views  Laravel Blade.
+Cagilo - a set of simple components for use in your views  Laravel Blade.
 
 
 ## Installing Cagilo
@@ -13,7 +13,7 @@ To install, you need to run the following command in your Laravel project:
 $ composer require cagilo/ui
 ```
 
-## Usage
+## Examples Of Using Components
 
 - Alert
 - Avatar
