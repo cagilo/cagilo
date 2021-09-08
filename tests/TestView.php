@@ -153,6 +153,20 @@ class TestView
         return $this;
     }
 
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function assertStringNotContains(string $value): static
+    {
+        Assert::assertStringNotContainsString($value, $this->rendered);
+
+        return $this;
+    }
+
+
     /**
      * Get the string contents of the rendered view.
      *
