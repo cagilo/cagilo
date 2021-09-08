@@ -1,6 +1,6 @@
 <title>{{ $title }}</title>
 
-<!-- Primary Meta Tags -->
+{{-- Primary Meta Tags --}}
 <meta name="title" content="{{ $title }}">
 <meta name="description" content="{{ $description }}">
 
@@ -16,7 +16,7 @@
 <meta name="robots" content="{{ $robots }}">
 @endempty
 
-<!-- Open Graph / Facebook -->
+{{-- Open Graph / Facebook --}}
 <meta property="og:type" content="{{ $type }}">
 <meta property="og:url" content="{{ $url }}"/>
 <meta property="og:locale" content="{{ app()->getLocale() }}"/>
@@ -24,7 +24,7 @@
 <meta property="og:description" content="{{ $description }}">
 <meta property="og:image" content="{{ $image }}">
 
-<!-- Twitter -->
+{{--  Twitter --}}
 <meta name="twitter:card" content="{{ $card }}"/>
 <meta name="twitter:url" content="{{ $url }}">
 <meta name="twitter:title" content="{{ $title }}">
