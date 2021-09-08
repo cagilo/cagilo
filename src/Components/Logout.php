@@ -19,11 +19,20 @@ class Logout extends Component
     public string $action;
 
     /**
-     * @param string $action
+     * The id attribute specifies the form and button.
+     *
+     * @var string
      */
-    public function __construct(string $action = 'logout')
+    public string $formId;
+
+    /**
+     * @param string $action
+     * @param string $formId
+     */
+    public function __construct(string $action = 'logout', string $formId = 'logout')
     {
         $this->action = Route::has($action) ? route($action) : $action;
+        $this->formId = $formId;
     }
 
     /**

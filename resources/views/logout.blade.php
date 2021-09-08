@@ -1,7 +1,7 @@
-<form method="POST" action="{{ $action }}">
+<form method="POST" action="{{ $action }}" id="{{ $formId }}" style="display: none">
     @csrf
-
-    <button type="submit" {{ $attributes }}>
-        {{ $slot->isEmpty() ? __('Log out') : $slot }}
-    </button>
 </form>
+
+<button form="{{ $formId }}" type="submit" {{ $attributes }}>
+    {{ $slot->isEmpty() ? __('Log out') : $slot }}
+</button>
