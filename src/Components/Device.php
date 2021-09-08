@@ -1,11 +1,10 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Cagilo\UI\Components;
 
 use Illuminate\View\Component;
 use Jenssegers\Agent\Agent;
+use Illuminate\Support\Collection;
 
 class Device extends Component
 {
@@ -15,9 +14,9 @@ class Device extends Component
     protected Agent $agent;
 
     /**
-     * @var array
+     * @var Collection
      */
-    protected array $rules = [];
+    protected Collection $rules;
 
     /**
      * Create a new component instance.
@@ -32,23 +31,23 @@ class Device extends Component
      * @return void
      */
     public function __construct(
-        Agent $agent,
-        bool  $desktop = false,
-        bool  $phone = false,
-        bool  $tablet = false,
-        bool  $robot = false,
-        bool  $other = false
+        Agent       $agent,
+        bool|string $desktop = false,
+        bool|string $phone = false,
+        bool|string $tablet = false,
+        bool|string $robot = false,
+        bool|string $other = false
     )
     {
         $this->agent = $agent;
 
-        $this->rules = [
+        $this->rules = collect([
             'desktop' => $desktop,
             'phone'   => $phone,
             'tablet'  => $tablet,
             'robot'   => $robot,
             'other'   => $other,
-        ];
+        ])->map(fn($value) => filter_var($value, FILTER_VALIDATE_BOOLEAN));
     }
 
     /**
@@ -70,6 +69,6 @@ class Device extends Component
      */
     public function shouldRender(): bool
     {
-        return $this->rules[$this->agent->deviceType()];
+        return $this->rules->get($this->agent->deviceType(), false);
     }
 }
