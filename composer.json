@@ -18,7 +18,8 @@
     "require": {
         "php": "^8.0",
         "laravel/framework": "^8.87",
-        "jenssegers/agent": "^2.6"
+        "jenssegers/agent": "^2.6",
+        "orchid/blade-icons": "1.3.2"
     },
     "conflict": {
         "jenssegers/agent": "<2.6.4",
