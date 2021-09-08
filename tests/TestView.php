@@ -4,11 +4,9 @@ declare(strict_types=1);
 
 namespace Cagilo\UI\Tests;
 
-use Illuminate\Support\Str;
 use Illuminate\Testing\Assert;
 use Illuminate\Testing\Constraints\SeeInOrder;
 use Illuminate\View\View;
-use DOMDocument;
 
 
 class TestView

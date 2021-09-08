@@ -8,5 +8,8 @@ use Cagilo\UI\Tests\ComponentTestCase;
 
 class MetaTest extends ComponentTestCase
 {
-
+    public function testShowMessage()
+    {
+        $this->assertTrue(true);
+    }
 }

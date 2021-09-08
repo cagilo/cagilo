@@ -23,6 +23,6 @@ class CagiloServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/cagilo.php', 'cagilo-config');
+        $this->mergeConfigFrom(__DIR__ . '/../config/cagilo.php', 'cagilo');
     }
 }
