@@ -1,12 +1,12 @@
 {
     "name": "cagilo/cagilo",
-    "description": "",
+    "description": "A set of open-source Blade components for the Laravel Framework",
     "keywords": [
         "blade-components",
         "laravel",
         "ui"
     ],
-    "homepage": "https://github.com/cagilo/ui",
+    "homepage": "https://cagilo.github.io",
     "license": "MIT",
     "authors": [
         {
