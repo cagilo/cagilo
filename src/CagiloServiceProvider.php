@@ -6,6 +6,7 @@ namespace Cagilo\UI;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Orchid\Icons\IconFinder;
 
 class CagiloServiceProvider extends ServiceProvider
 {
