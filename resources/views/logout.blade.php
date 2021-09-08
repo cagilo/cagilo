@@ -1,4 +1,4 @@
-<form method="POST" action="{{ $action }}" id="{{ $formId }}" style="display: none">
+<form method="POST" action="{{ $action }}" id="{{ $formId }}">
     @csrf
 </form>
 
