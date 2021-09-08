@@ -52,7 +52,7 @@
     "extra": {
         "laravel": {
             "providers": [
-              "CagiloServiceProvider"
+              "Cagilo\\UI\\CagiloServiceProvider"
             ]
         }
     }
