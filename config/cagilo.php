@@ -19,6 +19,7 @@ return [
         'alert'  => Components\Alert::class,
         'device' => Components\Device::class,
         'error'  => Components\Error::class,
+        'icon'   => Components\Icon::class,
         'logout' => Components\Logout::class,
         'meta'   => Components\Meta::class,
     ],
