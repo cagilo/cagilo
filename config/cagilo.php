@@ -22,6 +22,7 @@ return [
         'icon'   => Components\Icon::class,
         'logout' => Components\Logout::class,
         'meta'   => Components\Meta::class,
+        'submit' => Components\Submit::class,
     ],
 
     /*

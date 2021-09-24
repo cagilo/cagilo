@@ -7,12 +7,9 @@ namespace Cagilo\UI\Components;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
-/**
- * @deprecated Will be removed in the next major version.
- * It is recommended to use the <x-submit> tag instead of this class
- */
-class Logout extends Component
+class Submit extends Component
 {
     /**
      * Attribute specifies where to send
@@ -30,13 +27,13 @@ class Logout extends Component
     public string $formId;
 
     /**
-     * @param string $action
-     * @param string $formId
+     * @param string      $action
+     * @param string|null $formId
      */
-    public function __construct(string $action = 'logout', string $formId = 'logout')
+    public function __construct(string $action, string $formId = null)
     {
         $this->action = Route::has($action) ? route($action) : $action;
-        $this->formId = $formId;
+        $this->formId = $formId ?? (string) Str::uuid();
     }
 
     /**
@@ -44,6 +41,6 @@ class Logout extends Component
      */
     public function render(): View
     {
-        return view('cagilo::logout');
+        return view('cagilo::submit');
     }
 }

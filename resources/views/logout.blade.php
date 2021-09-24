@@ -1,7 +1,3 @@
-<form method="POST" action="{{ $action }}" id="{{ $formId }}">
-    @csrf
-</form>
-
-<button form="{{ $formId }}" type="submit" {{ $attributes }}>
+<x-submit action="{{ $action }}"  formId="{{$formId}}" {{ $attributes }}>
     {{ $slot->isEmpty() ? __('Log out') : $slot }}
-</button>
+</x-submit>
