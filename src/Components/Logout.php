@@ -9,7 +9,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
 
 /**
- * @deprecated Will be removed in the next major version.
  * It is recommended to use the <x-submit> tag instead of this class
  */
 class Logout extends Component
