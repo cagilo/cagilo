@@ -26,7 +26,7 @@ class CagiloServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'cagilo');
 
         collect(config('cagilo.components', []))->each(fn($class, $alias) => Blade::component($alias, $class));
-        collect(config('cagilo.icons', []))->each(fn($key, $path) => $iconFinder->registerIconDirectory($key, $path));
+        collect(config('cagilo.icons', []))->each(fn($path, $key) => $iconFinder->registerIconDirectory($key, $path));
     }
 
     public function register(): void
