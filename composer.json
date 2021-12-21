@@ -23,7 +23,7 @@
     },
     "conflict": {
         "jenssegers/agent": "<2.6.4",
-        "orchestra/testbench-core": "<6.24.1"
+        "orchestra/testbench-core": "<6.24.1",
         "mockery/mockery": "<1.4.2",
         "laravel/framework": "<8.76.0"     
     },
