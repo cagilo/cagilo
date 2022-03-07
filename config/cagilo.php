@@ -23,6 +23,7 @@ return [
         'logout' => Components\Logout::class,
         'meta'   => Components\Meta::class,
         'submit' => Components\Submit::class,
+        'time'   => Components\Time::class,
     ],
 
     /*
@@ -38,4 +39,16 @@ return [
     'icons' => [
 
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Date Format
+    |--------------------------------------------------------------------------
+    |
+    | The format will be used when using the time component for custom display
+    |
+    | Example: https://www.php.net/manual/en/class.datetimeinterface.php
+    */
+
+    'date-format' => 'Y-m-d H:i:s',
 ];
