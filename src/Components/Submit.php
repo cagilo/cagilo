@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Cagilo\UI\Components;
 
-use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+use Illuminate\View\Component;
 
 class Submit extends Component
 {

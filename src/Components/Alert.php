@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Cagilo\UI\Components;
 
 use Illuminate\Contracts\Session\Session;
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Arr;
 use Illuminate\View\Component;
-use Illuminate\Contracts\View\View;
 
 class Alert extends Component
 {
@@ -59,6 +59,6 @@ class Alert extends Component
      */
     public function shouldRender(): bool
     {
-        return session()->has($this->type) && !empty($this->messages());
+        return session()->has($this->type) && ! empty($this->messages());
     }
 }

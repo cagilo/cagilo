@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Cagilo\UI\Components;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\ViewErrorBag;
 use Illuminate\View\Component;
-use Illuminate\Contracts\View\View;
 
 class Error extends Component
 {

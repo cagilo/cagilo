@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Cagilo\UI\Components;
 
 use Carbon\Carbon;
-use Illuminate\View\Component;
-use Illuminate\Contracts\View\View;
 use DateTimeInterface;
+use Illuminate\Contracts\View\View;
+use Illuminate\View\Component;
 
 class Time extends Component
 {

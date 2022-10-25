@@ -22,13 +22,12 @@ class DeviceTest extends ComponentTestCase
      */
     protected function isShowComponent(
         string $userAgent,
-        bool   $desktop = false,
-        bool   $phone = false,
-        bool   $tablet = false,
-        bool   $robot = false,
-        bool   $other = false
-    ): bool
-    {
+        bool $desktop = false,
+        bool $phone = false,
+        bool $tablet = false,
+        bool $robot = false,
+        bool $other = false
+    ): bool {
         $agent = new Agent();
 
         $agent->setUserAgent($userAgent);
@@ -56,13 +55,13 @@ class DeviceTest extends ComponentTestCase
 
     public function testTablet(): void
     {
-        $view = $this->isShowComponent( 'Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; ASUS Transformer Pad TF300T Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30', tablet: true);
+        $view = $this->isShowComponent('Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; ASUS Transformer Pad TF300T Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30', tablet: true);
         $this->assertNotNull($view);
     }
 
     public function testCombinate(): void
     {
-        $view = $this->isShowComponent( 'Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; ASUS Transformer Pad TF300T Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30', phone: true, tablet: true);
+        $view = $this->isShowComponent('Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; ASUS Transformer Pad TF300T Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30', phone: true, tablet: true);
         $this->assertTrue($view);
     }
 
@@ -71,5 +70,4 @@ class DeviceTest extends ComponentTestCase
         $view = $this->isShowComponent('');
         $this->assertFalse($view);
     }
-
 }

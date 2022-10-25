@@ -11,7 +11,7 @@ class SubmitTest extends ComponentTestCase
 {
     public function testRenderComponent(): void
     {
-        Route::post('logout', fn() => '')->name('logout');
+        Route::post('logout', fn () => '')->name('logout');
         $this->setUpApplicationRoutes();
 
         $this
@@ -20,7 +20,6 @@ class SubmitTest extends ComponentTestCase
             ->assertStringContains('<form method="POST" action="subscribe"')
             ->assertStringContains('<input type="hidden" name="_token" value="">')
             ->assertStringContains('type="submit');
-
     }
 
     public function testRenderWithAttributes(): void
@@ -33,7 +32,6 @@ class SubmitTest extends ComponentTestCase
             ->assertStringContains('type="submit" class="text-muted">');
     }
 
-
     public function testRenderWithFormIdAttributes(): void
     {
         $this
@@ -45,12 +43,11 @@ class SubmitTest extends ComponentTestCase
 
     public function testRenderWithRouteNameComponent(): void
     {
-        Route::post('subscribe', fn() => '')->name('subscribe');
+        Route::post('subscribe', fn () => '')->name('subscribe');
         $this->setUpApplicationRoutes();
 
         $this
             ->blade('<x-submit action="subscribe"/>')
             ->assertStringContains('<form method="POST" action="http://localhost/subscribe"');
-
     }
 }

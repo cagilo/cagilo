@@ -51,7 +51,7 @@ class AlertTest extends ComponentTestCase
         $message = tap([
             'Form was successfully submitted.',
             'We have sent you a confirmation email.',
-        ], fn($message) => session()->flash('alert', $message));
+        ], fn ($message) => session()->flash('alert', $message));
 
         $template = <<<'HTML'
             <x-alert>

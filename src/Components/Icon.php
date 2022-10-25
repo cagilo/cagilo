@@ -8,5 +8,4 @@ use Orchid\Icons\IconComponent as OrchidIcon;
 
 class Icon extends OrchidIcon
 {
-
 }

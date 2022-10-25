@@ -18,7 +18,7 @@ class TimeTest extends ComponentTestCase
     {
         parent::setUp();
 
-        $this->date = new Carbon('2021-10-23 04:00:00', 'UTC');;
+        $this->date = new Carbon('2021-10-23 04:00:00', 'UTC');
     }
 
     public function testRenderComponent(): void

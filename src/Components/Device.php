@@ -2,9 +2,9 @@
 
 namespace Cagilo\UI\Components;
 
+use Illuminate\Support\Collection;
 use Illuminate\View\Component;
 use Jenssegers\Agent\Agent;
-use Illuminate\Support\Collection;
 
 class Device extends Component
 {
@@ -31,14 +31,13 @@ class Device extends Component
      * @return void
      */
     public function __construct(
-        Agent       $agent,
+        Agent $agent,
         bool|string $desktop = false,
         bool|string $phone = false,
         bool|string $tablet = false,
         bool|string $robot = false,
         bool|string $other = false
-    )
-    {
+    ) {
         $this->agent = $agent;
 
         $this->rules = collect([
@@ -47,7 +46,7 @@ class Device extends Component
             'tablet'  => $tablet,
             'robot'   => $robot,
             'other'   => $other,
-        ])->map(fn($value) => filter_var($value, FILTER_VALIDATE_BOOLEAN));
+        ])->map(fn ($value) => filter_var($value, FILTER_VALIDATE_BOOLEAN));
     }
 
     /**

@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Cagilo\UI\Components;
 
-use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
+use Illuminate\View\Component;
 
 class Meta extends Component
 {
@@ -40,8 +40,7 @@ class Meta extends Component
         string $card = 'summary_large_image',
         string $image = '',
         string $url = ''
-    )
-    {
+    ) {
         $this->title = $title;
         $this->description = $description;
         $this->keywords = $keywords;

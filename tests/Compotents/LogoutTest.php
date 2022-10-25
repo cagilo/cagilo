@@ -11,7 +11,7 @@ class LogoutTest extends ComponentTestCase
 {
     public function testRenderComponent(): void
     {
-        Route::post('logout', fn() => '')->name('logout');
+        Route::post('logout', fn () => '')->name('logout');
         $this->setUpApplicationRoutes();
 
         $this
@@ -20,7 +20,6 @@ class LogoutTest extends ComponentTestCase
             ->assertStringContains('<form method="POST" action="http://localhost/logout"')
             ->assertStringContains('<input type="hidden" name="_token" value="">')
             ->assertStringContains('<button form="logout" type="submit');
-
     }
 
     public function testRenderWithAttributes(): void
@@ -32,7 +31,6 @@ class LogoutTest extends ComponentTestCase
             ->assertStringContains('<input type="hidden" name="_token" value="">')
             ->assertStringContains('<button form="logout" type="submit" class="text-muted">');
     }
-
 
     public function testRenderWithFormIdAttributes(): void
     {

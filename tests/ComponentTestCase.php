@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Cagilo\UI\Tests;
 
-use Illuminate\Support\Facades\View;
 use Cagilo\UI\CagiloServiceProvider;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
 use Orchestra\Testbench\TestCase;
 
@@ -14,9 +14,6 @@ use Orchestra\Testbench\TestCase;
  */
 abstract class ComponentTestCase extends TestCase
 {
-    /**
-     *
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -58,11 +55,11 @@ abstract class ComponentTestCase extends TestCase
     {
         $tempDirectory = sys_get_temp_dir();
 
-        if (!in_array($tempDirectory, View::getFinder()->getPaths())) {
+        if (! in_array($tempDirectory, View::getFinder()->getPaths())) {
             View::addLocation(sys_get_temp_dir());
         }
 
-        $tempFile = tempnam($tempDirectory, 'laravel-blade') . '.blade.php';
+        $tempFile = tempnam($tempDirectory, 'laravel-blade').'.blade.php';
 
         file_put_contents($tempFile, $template);
 

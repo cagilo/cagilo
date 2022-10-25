@@ -8,7 +8,6 @@ use Illuminate\Testing\Assert;
 use Illuminate\Testing\Constraints\SeeInOrder;
 use Illuminate\View\View;
 
-
 class TestView
 {
     /**
@@ -30,8 +29,9 @@ class TestView
      *
      * @param \Illuminate\View\View $view
      *
-     * @return void
      * @throws \Throwable
+     *
+     * @return void
      */
     public function __construct(View $view)
     {
@@ -153,7 +153,6 @@ class TestView
         return $this;
     }
 
-
     /**
      * @param string $value
      *
@@ -165,7 +164,6 @@ class TestView
 
         return $this;
     }
-
 
     /**
      * Get the string contents of the rendered view.

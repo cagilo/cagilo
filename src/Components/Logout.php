@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Cagilo\UI\Components;
 
-use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Route;
+use Illuminate\View\Component;
 
 /**
  * It is recommended to use the <x-submit> tag instead of this class
