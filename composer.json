@@ -19,7 +19,7 @@
         "php": "^8.0",
         "laravel/framework": "^9.3",
         "jenssegers/agent": "^2.6",
-        "orchid/blade-icons": "^2.0"
+        "orchid/blade-icons": "^3.0"
     },
     "conflict": {
         "jenssegers/agent": "<2.6.4",
@@ -29,7 +29,8 @@
         "phpunit/phpunit": "^9.3",
         "vimeo/psalm": "^4.8",
         "orchestra/testbench-core": "^7.0",
-        "mockery/mockery": "^1.4.2"
+        "mockery/mockery": "^1.4.2",
+        "laravel/pint": "^1.2"
     },
     "autoload": {
         "psr-4": {
