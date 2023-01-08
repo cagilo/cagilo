@@ -1,6 +1,13 @@
 # Cagilo 
 
-Cagilo - a set of simple components for use in your views  Laravel Blade.
+
+Enhance your Laravel Blade views with Cagilo, a powerful set of simple components that add professional-grade functionality and style to your web applications.
+
+With Cagilo, you can easily integrate components such as `Alert`, `Device`, `Error`, `Icon`, `Logout`, and `Meta` tags into your views, without the need for complex coding. These components provide valuable functionality and help you create a professional and user-friendly experience for your users.
+
+Cagilo is fully customizable, allowing you to tailor the look and feel of your components to match your brand. And with regular updates and a growing library of components, you can always count on Cagilo to provide the tools you need to enhance your views.
+
+Don't miss out on the benefits of Cagilo. Try it today and see the difference it can make for your Laravel Blade views!
 
 
 ## Official Documentation
