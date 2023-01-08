@@ -21,7 +21,9 @@ Find a bug? Head over to our [issue tracker](https://github.com/cagilo/cagilo/is
 
 ## Maintainers
 
-Cagilo is developed and maintained by [Alexandr Chernyaev](https://github.com/tabuna).
+Cagilo is developed and maintained by [Alexandr Chernyaev](https://github.com/tabuna). 
+
+We are always looking for ways to improve Cagilo and welcome contributions from the community. If you are interested in becoming a maintainer or contributor, don't hesitate to reach out!
 
 ## License
 
