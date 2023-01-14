@@ -39,7 +39,8 @@ class Meta extends Component
         string $type = 'website',
         string $card = 'summary_large_image',
         string $image = '',
-        string $url = ''
+        string $url = '',
+        bool $escape = false
     ) {
         $this->title = $title;
         $this->description = $description;
@@ -50,6 +51,18 @@ class Meta extends Component
         $this->card = $card;
         $this->image = $image;
         $this->url = $url ?: url()->current();
+
+        if ($escape) {
+            $this->title = e($this->title);
+            $this->description = e($this->description);
+            $this->keywords = e($this->keywords);
+            $this->author = e($this->author);
+            $this->robots = e($this->robots);
+            $this->type = e($this->type);
+            $this->card = e($this->card);
+            $this->image = e($this->image);
+            $this->url = e($this->url);
+        }
     }
 
     public function render(): View

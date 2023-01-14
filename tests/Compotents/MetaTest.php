@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Cagilo\UI\Tests\Compotents;
 
 use Cagilo\UI\Tests\ComponentTestCase;
+use Illuminate\Support\Facades\Blade;
 
 class MetaTest extends ComponentTestCase
 {
@@ -50,5 +51,36 @@ class MetaTest extends ComponentTestCase
             ->assertStringContains('<title>Hello World</title>')
             ->assertStringNotContains('<meta name="author" content="">')
             ->assertStringNotContains('<meta name="robots" content="">');
+    }
+
+    public function testForNonEncodeElement(): void
+    {
+        $template = <<<'HTML'
+            <x-meta
+                title="Hands&Feet"
+                description='"/> <script>alert(1)</script>`/>'
+            />
+            HTML;
+
+        $this
+            ->blade($template)
+            ->assertSee('<title>Hands&Feet</title>', false)
+            ->assertSee('"/> <script>alert(1)</script>', false);
+    }
+
+    public function testEncodeElement(): void
+    {
+        $template = <<<'HTML'
+            <x-meta
+                title="Hands&Feet"
+                description='"/> <script>alert(1)</script>`/>'
+                :escape="true"
+            />
+            HTML;
+
+        $this
+            ->blade($template)
+            ->assertStringContains('Hands&amp;Feet')
+            ->assertStringContains('&quot;/&gt; &lt;script&gt;alert(1)&lt;/script&gt;`/&gt;');
     }
 }
