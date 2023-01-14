@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Cagilo\UI\Tests\Compotents;
 
 use Cagilo\UI\Tests\ComponentTestCase;
-use Illuminate\Support\Facades\Blade;
 
 class MetaTest extends ComponentTestCase
 {

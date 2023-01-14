@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'components' => [
+    'components'  => [
         'alert'  => Components\Alert::class,
         'device' => Components\Device::class,
         'error'  => Components\Error::class,
@@ -36,7 +36,7 @@ return [
     | Example: [ 'fa' => storage_path('app/fontawesome') ]
     */
 
-    'icons' => [
+    'icons'       => [
 
     ],
 
