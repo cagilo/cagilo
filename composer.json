@@ -21,6 +21,10 @@
         "jenssegers/agent": "^2.6",
         "orchid/blade-icons": "^3.0|^4.0"
     },
+    "conflict": {
+        "jenssegers/agent": "<2.6.4",
+        "orchestra/testbench-core": "<6.24.1"
+    },
     "require-dev": {
         "phpunit/phpunit": "^9.0|^10.0",
         "vimeo/psalm": "^5.0",
