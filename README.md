@@ -1,5 +1,7 @@
 # Cagilo 
 
+[![Tests](https://github.com/cagilo/cagilo/actions/workflows/phpunit.yml/badge.svg)](https://github.com/cagilo/cagilo/actions/workflows/phpunit.yml)
+
 Enhance your Laravel Blade views with Cagilo, a powerful set of simple components that add professional-grade functionality and style to your web applications.
 
 With Cagilo, you can easily integrate components such as `Alert`, `Device`, `Error`, `Icon`, `Logout`, and `Meta` tags into your views, without the need for complex coding. These components provide valuable functionality and help you create a professional and user-friendly experience for your users.
