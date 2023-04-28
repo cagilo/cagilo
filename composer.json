@@ -17,20 +17,16 @@
     ],
     "require": {
         "php": "^8.0",
-        "laravel/framework": "^9.3",
+        "laravel/framework": "^9.0|^10.0",
         "jenssegers/agent": "^2.6",
-        "orchid/blade-icons": "^3.0"
-    },
-    "conflict": {
-        "jenssegers/agent": "<2.6.4",
-        "orchestra/testbench-core": "<6.24.1"
+        "orchid/blade-icons": "^3.0|^4.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.3",
-        "vimeo/psalm": "^5.2",
-        "orchestra/testbench-core": "^7.0",
+        "phpunit/phpunit": "^9.0|^10.0",
+        "vimeo/psalm": "^5.0",
         "mockery/mockery": "^1.4.2",
-        "laravel/pint": "^1.2"
+        "orchestra/testbench-core": "^7.0|^8.0",
+        "laravel/pint": "^1.3"
     },
     "autoload": {
         "psr-4": {
