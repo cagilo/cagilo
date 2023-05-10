@@ -18,6 +18,7 @@ class Meta extends Component
     public $card;
     public $image;
     public $url;
+    public $csp;
 
     /**
      * @param string $title
@@ -29,6 +30,7 @@ class Meta extends Component
      * @param string $card
      * @param string $image
      * @param string $url
+     * @param string|array $csp
      */
     public function __construct(
         string $title = '',
@@ -40,6 +42,7 @@ class Meta extends Component
         string $card = 'summary_large_image',
         string $image = '',
         string $url = '',
+        string|array $csp = '',
         bool $escape = false
     ) {
         $this->title = $title;
@@ -51,6 +54,7 @@ class Meta extends Component
         $this->card = $card;
         $this->image = $image;
         $this->url = $url ?: url()->current();
+        $this->csp = is_array($csp) ? implode(' ', $csp) : $csp;
 
         if ($escape) {
             $this->title = e($this->title);
@@ -62,6 +66,7 @@ class Meta extends Component
             $this->card = e($this->card);
             $this->image = e($this->image);
             $this->url = e($this->url);
+            $this->csp = e($this->csp);
         }
     }
 
