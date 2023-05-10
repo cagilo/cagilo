@@ -19,6 +19,7 @@ class MetaTest extends ComponentTestCase
                 robots="noindex"
                 card="summary"
                 image="http://example.com/social.jpg"
+                csp="example.com example.edu"
             />
             HTML;
 
@@ -40,7 +41,9 @@ class MetaTest extends ComponentTestCase
             ->assertStringContains('<meta name="twitter:url" content="http://localhost">')
             ->assertStringContains('<meta name="twitter:title" content="Hello World">')
             ->assertStringContains('<meta name="twitter:description" content="Blade components are awesome!">')
-            ->assertStringContains('<meta name="twitter:image" content="http://example.com/social.jpg">');
+            ->assertStringContains('<meta name="twitter:image" content="http://example.com/social.jpg">')
+            ->assertStringContains('<meta http-equiv="Content-Security-Policy"
+          content="default-src \'self\' data: \'unsafe-inline\' \'unsafe-hashes\' \'unsafe-eval\' example.com example.edu">');
     }
 
     public function testForNotDisplayingOptionalElements(): void
@@ -49,7 +52,9 @@ class MetaTest extends ComponentTestCase
             ->blade(' <x-meta title="Hello World"  />')
             ->assertStringContains('<title>Hello World</title>')
             ->assertStringNotContains('<meta name="author" content="">')
-            ->assertStringNotContains('<meta name="robots" content="">');
+            ->assertStringNotContains('<meta name="robots" content="">')
+            ->assertStringNotContains('<meta http-equiv="Content-Security-Policy"
+          content="default-src \'self\' data: \'unsafe-inline\' \'unsafe-hashes\' \'unsafe-eval\'">');;
     }
 
     public function testForNonEncodeElement(): void
