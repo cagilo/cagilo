@@ -17,9 +17,9 @@
 @endempty
 
 @empty(!$csp)
-    <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self' data: 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval' {{$csp}}">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval' {!! $csp !!}">
 @endempty
+
 {{-- Open Graph / Facebook --}}
 <meta property="og:type" content="{!! $type !!}">
 <meta property="og:url" content="{!! $url !!}"/>
