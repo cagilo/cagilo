@@ -42,8 +42,7 @@ class MetaTest extends ComponentTestCase
             ->assertStringContains('<meta name="twitter:title" content="Hello World">')
             ->assertStringContains('<meta name="twitter:description" content="Blade components are awesome!">')
             ->assertStringContains('<meta name="twitter:image" content="http://example.com/social.jpg">')
-            ->assertStringContains('<meta http-equiv="Content-Security-Policy"
-          content="default-src \'self\' data: \'unsafe-inline\' \'unsafe-hashes\' \'unsafe-eval\' example.com example.edu">');
+            ->assertStringContains('<meta http-equiv="Content-Security-Policy" content="default-src \'self\' data: \'unsafe-inline\' \'unsafe-hashes\' \'unsafe-eval\' example.com example.edu">');
     }
 
     public function testForNotDisplayingOptionalElements(): void
