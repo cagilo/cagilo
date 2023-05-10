@@ -54,7 +54,7 @@ class MetaTest extends ComponentTestCase
             ->assertStringNotContains('<meta name="author" content="">')
             ->assertStringNotContains('<meta name="robots" content="">')
             ->assertStringNotContains('<meta http-equiv="Content-Security-Policy"
-          content="default-src \'self\' data: \'unsafe-inline\' \'unsafe-hashes\' \'unsafe-eval\'">');;
+          content="default-src \'self\' data: \'unsafe-inline\' \'unsafe-hashes\' \'unsafe-eval\'">');
     }
 
     public function testForNonEncodeElement(): void

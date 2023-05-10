@@ -21,15 +21,15 @@ class Meta extends Component
     public $csp;
 
     /**
-     * @param string $title
-     * @param string $description
-     * @param string $keywords
-     * @param string $author
-     * @param string $robots
-     * @param string $type
-     * @param string $card
-     * @param string $image
-     * @param string $url
+     * @param string       $title
+     * @param string       $description
+     * @param string       $keywords
+     * @param string       $author
+     * @param string       $robots
+     * @param string       $type
+     * @param string       $card
+     * @param string       $image
+     * @param string       $url
      * @param string|array $csp
      */
     public function __construct(
