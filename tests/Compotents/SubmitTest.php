@@ -13,7 +13,8 @@ class SubmitTest extends ComponentTestCase
      *
      * @api
      *
-     * @param  \Illuminate\Routing\Router  $router
+     * @param \Illuminate\Routing\Router $router
+     *
      * @return void
      */
     protected function defineWebRoutes($router)

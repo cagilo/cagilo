@@ -31,7 +31,7 @@ class Time extends Component
      * @param string|null        $format
      * @param bool               $human
      */
-    public function __construct(DateTimeInterface $date, string $format = null, bool $human = false)
+    public function __construct(DateTimeInterface $date, ?string $format = null, bool $human = false)
     {
         $this->date = Carbon::instance($date);
         $this->format = $format ?? config('cagilo.date-format');
