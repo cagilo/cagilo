@@ -30,7 +30,7 @@ class Submit extends Component
      * @param string      $action
      * @param string|null $formId
      */
-    public function __construct(string $action, string $formId = null)
+    public function __construct(string $action, ?string $formId = null)
     {
         $this->action = Route::has($action) ? route($action) : $action;
         $this->formId = $formId ?? (string) Str::uuid();
