@@ -5,20 +5,29 @@ declare(strict_types=1);
 namespace Cagilo\UI\Tests\Compotents;
 
 use Cagilo\UI\Tests\ComponentTestCase;
-use Illuminate\Support\Facades\Route;
 
 class SubmitTest extends ComponentTestCase
 {
+    /**
+     * Define web routes setup.
+     *
+     * @api
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    protected function defineWebRoutes($router)
+    {
+        $router->post('subscribe', fn () => '')->name('subscribe');
+    }
+
     public function testRenderComponent(): void
     {
-        Route::post('logout', fn () => '')->name('logout');
-        $this->setUpApplicationRoutes();
-
         $this
-            ->blade('<x-submit action="subscribe"/>')
+            ->blade('<x-submit action="anyString"/>')
             ->assertSee('Submit')
-            ->assertStringContains('<form method="POST" action="subscribe"')
-            ->assertStringContains('<input type="hidden" name="_token" value="">')
+            ->assertStringContains('<form method="POST" action="anyString"')
+            ->assertStringContains('<input type="hidden" name="_token" value=""')
             ->assertStringContains('type="submit');
     }
 
@@ -28,7 +37,7 @@ class SubmitTest extends ComponentTestCase
             ->blade('<x-submit action="http://example.com" class="text-muted">Sign Out</x-submit>')
             ->assertSee('Sign Out')
             ->assertStringContains('<form method="POST" action="http://example.com"')
-            ->assertStringContains('<input type="hidden" name="_token" value="">')
+            ->assertStringContains('<input type="hidden" name="_token" value=""')
             ->assertStringContains('type="submit" class="text-muted">');
     }
 
@@ -43,9 +52,6 @@ class SubmitTest extends ComponentTestCase
 
     public function testRenderWithRouteNameComponent(): void
     {
-        Route::post('subscribe', fn () => '')->name('subscribe');
-        $this->setUpApplicationRoutes();
-
         $this
             ->blade('<x-submit action="subscribe"/>')
             ->assertStringContains('<form method="POST" action="http://localhost/subscribe"');
