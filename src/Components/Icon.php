@@ -6,6 +6,4 @@ namespace Cagilo\UI\Components;
 
 use Orchid\Icons\IconComponent as OrchidIcon;
 
-class Icon extends OrchidIcon
-{
-}
+class Icon extends OrchidIcon {}
