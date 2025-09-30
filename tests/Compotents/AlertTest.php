@@ -8,7 +8,7 @@ use Cagilo\UI\Tests\ComponentTestCase;
 
 class AlertTest extends ComponentTestCase
 {
-    public function testShowMessage(): void
+    public function test_show_message(): void
     {
         session()->flash('alert', 'Form was successfully submitted.');
 
@@ -18,7 +18,7 @@ class AlertTest extends ComponentTestCase
             ->assertStringContains('role="alert"');
     }
 
-    public function testSpecifyType(): void
+    public function test_specify_type(): void
     {
         session()->flash('error', 'Form contains some errors.');
 
@@ -28,7 +28,7 @@ class AlertTest extends ComponentTestCase
             ->assertStringContains('role="alert"');
     }
 
-    public function testSlotted(): void
+    public function test_slotted(): void
     {
         session()->flash('alert', 'Form was successfully submitted.');
 
@@ -46,7 +46,7 @@ class AlertTest extends ComponentTestCase
             ->assertStringContains('role="alert"');
     }
 
-    public function testMultipleMessage(): void
+    public function test_multiple_message(): void
     {
         $message = tap([
             'Form was successfully submitted.',

@@ -22,7 +22,7 @@ class SubmitTest extends ComponentTestCase
         $router->post('subscribe', fn () => '')->name('subscribe');
     }
 
-    public function testRenderComponent(): void
+    public function test_render_component(): void
     {
         $this
             ->blade('<x-submit action="anyString"/>')
@@ -32,7 +32,7 @@ class SubmitTest extends ComponentTestCase
             ->assertStringContains('type="submit');
     }
 
-    public function testRenderWithAttributes(): void
+    public function test_render_with_attributes(): void
     {
         $this
             ->blade('<x-submit action="http://example.com" class="text-muted">Sign Out</x-submit>')
@@ -42,7 +42,7 @@ class SubmitTest extends ComponentTestCase
             ->assertStringContains('type="submit" class="text-muted">');
     }
 
-    public function testRenderWithFormIdAttributes(): void
+    public function test_render_with_form_id_attributes(): void
     {
         $this
             ->blade('<x-submit action="http://example.com" formId="sign-out">Sign Out</x-submit>')
@@ -51,7 +51,7 @@ class SubmitTest extends ComponentTestCase
             ->assertStringContains('<button form="sign-out"');
     }
 
-    public function testRenderWithRouteNameComponent(): void
+    public function test_render_with_route_name_component(): void
     {
         $this
             ->blade('<x-submit action="subscribe"/>')

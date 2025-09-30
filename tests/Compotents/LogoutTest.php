@@ -22,7 +22,7 @@ class LogoutTest extends ComponentTestCase
         $router->post('logout', fn () => '')->name('logout');
     }
 
-    public function testRenderComponent(): void
+    public function test_render_component(): void
     {
         $this
             ->blade('<x-logout />')
@@ -32,7 +32,7 @@ class LogoutTest extends ComponentTestCase
             ->assertStringContains('<button form="logout" type="submit');
     }
 
-    public function testRenderWithAttributes(): void
+    public function test_render_with_attributes(): void
     {
         $this
             ->blade('<x-logout action="http://example.com" class="text-muted">Sign Out</x-logout>')
@@ -42,7 +42,7 @@ class LogoutTest extends ComponentTestCase
             ->assertStringContains('<button form="logout" type="submit" class="text-muted">');
     }
 
-    public function testRenderWithFormIdAttributes(): void
+    public function test_render_with_form_id_attributes(): void
     {
         $this
             ->blade('<x-logout action="http://example.com" formId="sign-out">Sign Out</x-logout>')

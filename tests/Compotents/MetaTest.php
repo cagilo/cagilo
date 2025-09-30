@@ -8,7 +8,7 @@ use Cagilo\UI\Tests\ComponentTestCase;
 
 class MetaTest extends ComponentTestCase
 {
-    public function testRender(): void
+    public function test_render(): void
     {
         $template = <<<'HTML'
             <x-meta
@@ -45,7 +45,7 @@ class MetaTest extends ComponentTestCase
             ->assertStringContains('<meta http-equiv="Content-Security-Policy" content="default-src \'self\' data: \'unsafe-inline\' \'unsafe-hashes\' \'unsafe-eval\' example.com example.edu">');
     }
 
-    public function testForNotDisplayingOptionalElements(): void
+    public function test_for_not_displaying_optional_elements(): void
     {
         $this
             ->blade(' <x-meta title="Hello World"  />')
@@ -55,7 +55,7 @@ class MetaTest extends ComponentTestCase
             ->assertStringNotContains('<meta http-equiv="Content-Security-Policy" content="default-src \'self\' data: \'unsafe-inline\' \'unsafe-hashes\' \'unsafe-eval\'">');
     }
 
-    public function testForNonEncodeElement(): void
+    public function test_for_non_encode_element(): void
     {
         $template = <<<'HTML'
             <x-meta
@@ -70,7 +70,7 @@ class MetaTest extends ComponentTestCase
             ->assertSee('"/> <script>alert(1)</script>', false);
     }
 
-    public function testEncodeElement(): void
+    public function test_encode_element(): void
     {
         $template = <<<'HTML'
             <x-meta

@@ -21,12 +21,12 @@ class ErrorTest extends ComponentTestCase
      */
     private function withViewErrors(array $errors, string $key = 'default'): self
     {
-        View::share('errors', (new ViewErrorBag())->put($key, new MessageBag($errors)));
+        View::share('errors', (new ViewErrorBag)->put($key, new MessageBag($errors)));
 
         return $this;
     }
 
-    public function testComponentRendered(): void
+    public function test_component_rendered(): void
     {
         $this
             ->withViewErrors(['first_name' => 'Incorrect first name.'])
@@ -35,7 +35,7 @@ class ErrorTest extends ComponentTestCase
             ->assertStringContains('Incorrect first name.');
     }
 
-    public function testSlotted(): void
+    public function test_slotted(): void
     {
         $template = <<<'HTML'
             <x-error field="first_name">

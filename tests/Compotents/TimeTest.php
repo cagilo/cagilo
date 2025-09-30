@@ -21,7 +21,7 @@ class TimeTest extends ComponentTestCase
         $this->date = new Carbon('2021-10-23 04:00:00', 'UTC');
     }
 
-    public function testRenderComponent(): void
+    public function test_render_component(): void
     {
         $this->blade('<x-time :date="$date"/>', [
             'date' => $this->date,
@@ -29,7 +29,7 @@ class TimeTest extends ComponentTestCase
             ->assertStringContains('datetime="2021-10-23T04:00:00.000000Z"');
     }
 
-    public function testRenderFormatComponent(): void
+    public function test_render_format_component(): void
     {
         $this->blade('<x-time :date="$date" format="D, d M Y H:i:s O"/>', [
             'date' => $this->date,
@@ -38,7 +38,7 @@ class TimeTest extends ComponentTestCase
             ->assertStringContains($this->date->toISOString());
     }
 
-    public function testRenderHumanComponent(): void
+    public function test_render_human_component(): void
     {
         $this->blade('<x-time :date="$date" format="Y-m-d H:i:s" human/>', [
             'date' => $this->date,
