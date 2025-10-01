@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cagilo\UI\Tests\Compotents;
+namespace Cagilo\UI\Tests\Components;
 
 use Cagilo\UI\Tests\ComponentTestCase;
 use Illuminate\Support\Facades\View;
@@ -11,28 +11,13 @@ use Illuminate\Support\ViewErrorBag;
 
 class ErrorTest extends ComponentTestCase
 {
-    /**
-     * Populate the shared view error bag with the given errors.
-     *
-     * @param array  $errors
-     * @param string $key
-     *
-     * @return self
-     */
-    private function withViewErrors(array $errors, string $key = 'default'): self
-    {
-        View::share('errors', (new ViewErrorBag())->put($key, new MessageBag($errors)));
-
-        return $this;
-    }
-
     public function testComponentRendered(): void
     {
         $this
             ->withViewErrors(['first_name' => 'Incorrect first name.'])
             ->blade('<x-error field="first_name" class="text-danger"/>')
-            ->assertStringContains('class="text-danger"')
-            ->assertStringContains('Incorrect first name.');
+            ->assertSee('class="text-danger"', false)
+            ->assertSee('Incorrect first name.');
     }
 
     public function testSlotted(): void
@@ -50,7 +35,7 @@ class ErrorTest extends ComponentTestCase
         $this
             ->withViewErrors(['first_name' => ['Incorrect first name.', 'Needs at least 5 characters.']])
             ->blade($template)
-            ->assertStringContains('<li>Incorrect first name.</li>')
-            ->assertStringContains(' <li>Needs at least 5 characters.</li>');
+            ->assertSee('<li>Incorrect first name.</li>', false)
+            ->assertSee(' <li>Needs at least 5 characters.</li>', false);
     }
 }

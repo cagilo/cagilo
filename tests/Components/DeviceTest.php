@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cagilo\UI\Tests\Compotents;
+namespace Cagilo\UI\Tests\Components;
 
 use Cagilo\UI\Components\Device;
 use Cagilo\UI\Tests\ComponentTestCase;

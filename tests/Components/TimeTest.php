@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cagilo\UI\Tests\Compotents;
+namespace Cagilo\UI\Tests\Components;
 
 use Cagilo\UI\Tests\ComponentTestCase;
 use Carbon\Carbon;
@@ -26,7 +26,7 @@ class TimeTest extends ComponentTestCase
         $this->blade('<x-time :date="$date"/>', [
             'date' => $this->date,
         ])
-            ->assertStringContains('datetime="2021-10-23T04:00:00.000000Z"');
+            ->assertSee('datetime="2021-10-23T04:00:00.000000Z"', false);
     }
 
     public function testRenderFormatComponent(): void
@@ -35,7 +35,7 @@ class TimeTest extends ComponentTestCase
             'date' => $this->date,
         ])
             ->assertSee($this->date->format('D, d M Y H:i:s O'))
-            ->assertStringContains($this->date->toISOString());
+            ->assertSee($this->date->toISOString());
     }
 
     public function testRenderHumanComponent(): void
@@ -45,6 +45,6 @@ class TimeTest extends ComponentTestCase
         ])
             ->assertSee($this->date->diffForHumans())
             ->assertDontSee($this->date->format('Y-m-d H:i:s'))
-            ->assertStringContains($this->date->toISOString());
+            ->assertSee($this->date->toISOString());
     }
 }
