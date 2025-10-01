@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cagilo\UI\Tests\Compotents;
+namespace Cagilo\UI\Tests\Components;
 
 use Cagilo\UI\Tests\ComponentTestCase;
 
@@ -27,9 +27,9 @@ class SubmitTest extends ComponentTestCase
         $this
             ->blade('<x-submit action="anyString"/>')
             ->assertSee('Submit')
-            ->assertStringContains('<form method="POST" action="anyString"')
-            ->assertStringContains('<input type="hidden" name="_token" value=""')
-            ->assertStringContains('type="submit');
+            ->assertSee('<form method="POST" action="anyString"', false)
+            ->assertSee('<input type="hidden" name="_token" value=""', false)
+            ->assertSee('type="submit', false);
     }
 
     public function testRenderWithAttributes(): void
@@ -37,9 +37,9 @@ class SubmitTest extends ComponentTestCase
         $this
             ->blade('<x-submit action="http://example.com" class="text-muted">Sign Out</x-submit>')
             ->assertSee('Sign Out')
-            ->assertStringContains('<form method="POST" action="http://example.com"')
-            ->assertStringContains('<input type="hidden" name="_token" value=""')
-            ->assertStringContains('type="submit" class="text-muted">');
+            ->assertSee('<form method="POST" action="http://example.com"', false)
+            ->assertSee('<input type="hidden" name="_token" value=""', false)
+            ->assertSee('type="submit" class="text-muted">', false);
     }
 
     public function testRenderWithFormIdAttributes(): void
@@ -47,14 +47,14 @@ class SubmitTest extends ComponentTestCase
         $this
             ->blade('<x-submit action="http://example.com" formId="sign-out">Sign Out</x-submit>')
             ->assertSee('Sign Out')
-            ->assertStringContains('id="sign-out"')
-            ->assertStringContains('<button form="sign-out"');
+            ->assertSee('id="sign-out"', false)
+            ->assertSee('<button form="sign-out"', false);
     }
 
     public function testRenderWithRouteNameComponent(): void
     {
         $this
             ->blade('<x-submit action="subscribe"/>')
-            ->assertStringContains('<form method="POST" action="http://localhost/subscribe"');
+            ->assertSee('<form method="POST" action="http://localhost/subscribe"', false);
     }
 }

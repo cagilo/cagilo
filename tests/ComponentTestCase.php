@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Cagilo\UI\Tests;
 
 use Cagilo\UI\CagiloServiceProvider;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Str;
 use Orchestra\Testbench\TestCase;
 
 /**
@@ -41,30 +39,5 @@ abstract class ComponentTestCase extends TestCase
         session()->flashInput($input);
 
         request()->setLaravelSession(session());
-    }
-
-    /**
-     * Render the contents of the given Blade template string.
-     *
-     * @param string                                        $template
-     * @param \Illuminate\Contracts\Support\Arrayable|array $data
-     *
-     * @return TestView
-     */
-    protected function blade(string $template, array $data = []): TestView
-    {
-        $tempDirectory = sys_get_temp_dir();
-
-        if (! in_array($tempDirectory, View::getFinder()->getPaths())) {
-            View::addLocation(sys_get_temp_dir());
-        }
-
-        $tempFile = tempnam($tempDirectory, 'laravel-blade').'.blade.php';
-
-        file_put_contents($tempFile, $template);
-
-        $view = Str::of($tempFile)->basename()->before('.blade.php');
-
-        return new TestView(view($view, $data));
     }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cagilo\UI\Tests\Compotents;
+namespace Cagilo\UI\Tests\Components;
 
 use Cagilo\UI\Tests\ComponentTestCase;
 
@@ -15,7 +15,7 @@ class AlertTest extends ComponentTestCase
         $this
             ->blade('<x-alert/>')
             ->assertSee('Form was successfully submitted.')
-            ->assertStringContains('role="alert"');
+            ->assertSee('role="alert"', false);
     }
 
     public function testSpecifyType(): void
@@ -25,7 +25,7 @@ class AlertTest extends ComponentTestCase
         $this
             ->blade('<x-alert type="error"/>')
             ->assertSee('Form contains some errors.')
-            ->assertStringContains('role="alert"');
+            ->assertSee('role="alert"', false);
     }
 
     public function testSlotted(): void
@@ -43,7 +43,7 @@ class AlertTest extends ComponentTestCase
             ->blade($template)
             ->assertSee('Hello World')
             ->assertSee('Form was successfully submitted.')
-            ->assertStringContains('role="alert"');
+            ->assertSee('role="alert"', false);
     }
 
     public function testMultipleMessage(): void
@@ -64,6 +64,6 @@ class AlertTest extends ComponentTestCase
             ->blade($template)
             ->assertSee('Hello World')
             ->assertSeeInOrder($message)
-            ->assertStringContains('role="alert"');
+            ->assertSee('role="alert"', false);
     }
 }

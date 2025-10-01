@@ -16,23 +16,9 @@ jobs:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest ]
-        php: [8.3, 8.2, 8.1, 8.0]
-        laravel: [11.*, 10.*, 9.*]
+        php: [8.4, 8.3]
+        laravel: ['12.*']
         dependency-version: [prefer-lowest, prefer-stable]
-        include:
-          -   laravel: 11.*
-              testbench: 9.*
-          -   laravel: 10.*
-              testbench: 8.*
-          -   laravel: 9.*
-              testbench: 7.*
-        exclude:
-          - laravel: 11.*
-            php: 8.1
-          - laravel: 11.*
-            php: 8.0
-          - laravel: 10.*
-            php: 8.0
 
     name: P${{ matrix.php }} - ${{ matrix.os }} - L${{ matrix.laravel }} - ${{ matrix.dependency-version }}
 
@@ -55,6 +41,6 @@ jobs:
 
       - name: Install dependencies 🔧
         run: |
-          composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
+          composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction
       - name: Execute tests (Unit and Feature tests) via PHPUnit 🧪
         run: vendor/bin/phpunit --no-coverage --disable-coverage-ignore
