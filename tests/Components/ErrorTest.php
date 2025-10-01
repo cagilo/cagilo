@@ -5,9 +5,6 @@ declare(strict_types=1);
 namespace Cagilo\UI\Tests\Components;
 
 use Cagilo\UI\Tests\ComponentTestCase;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\MessageBag;
-use Illuminate\Support\ViewErrorBag;
 
 class ErrorTest extends ComponentTestCase
 {

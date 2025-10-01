@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Cagilo\UI\Tests;
 
 use Cagilo\UI\CagiloServiceProvider;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Str;
 use Orchestra\Testbench\TestCase;
 
 /**
