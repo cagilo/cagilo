@@ -1,4 +1,7 @@
 <form method="POST" action="{{ $action }}" id="{{ $formId }}">
+    @if($method)
+        @method($method)
+    @endif
     @csrf
 </form>
 

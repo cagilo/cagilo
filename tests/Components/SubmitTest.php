@@ -57,4 +57,12 @@ class SubmitTest extends ComponentTestCase
             ->blade('<x-submit action="subscribe"/>')
             ->assertSee('<form method="POST" action="http://localhost/subscribe"', false);
     }
+
+    public function testRenderForCustomMethodComponent(): void
+    {
+        $this
+            ->blade('<x-submit action="subscribe" method="DELETE"/>')
+            ->assertSee('<form method="POST" action="http://localhost/subscribe"', false)
+            ->assertSee('<input type="hidden" name="_method" value="DELETE">', false);
+    }
 }

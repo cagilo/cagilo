@@ -27,13 +27,22 @@ class Submit extends Component
     public string $formId;
 
     /**
-     * @param string      $action
+     * The HTTP method used when submitting the form.
+     *
+     * @var string|null
+     */
+    public ?string $method;
+
+    /**
+     * @param string $action
+     * @param string $method
      * @param string|null $formId
      */
-    public function __construct(string $action, ?string $formId = null)
+    public function __construct(string $action, string $method = null, ?string $formId = null)
     {
         $this->action = Route::has($action) ? route($action) : $action;
-        $this->formId = $formId ?? (string) Str::uuid();
+        $this->formId = $formId ?? Str::uuid()->toString();
+        $this->method = $method;
     }
 
     /**
