@@ -1,23 +1,21 @@
 name: Tests
 
 on:
-  # Run action on every push and PR
   push:
   pull_request:
-
-  # Run action at midnight to test against any updated dependencies
   schedule:
     - cron: '0 0 * * *'
 
 jobs:
   phpunit:
     runs-on: ${{ matrix.os }}
+
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-latest ]
+        os: [ubuntu-latest]
         php: [8.4, 8.3]
-        laravel: ['12.*']
+        laravel: ['12.*', '13.*']
         dependency-version: [prefer-lowest, prefer-stable]
 
     name: P${{ matrix.php }} - ${{ matrix.os }} - L${{ matrix.laravel }} - ${{ matrix.dependency-version }}
@@ -42,5 +40,6 @@ jobs:
       - name: Install dependencies 🔧
         run: |
           composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction
+
       - name: Execute tests (Unit and Feature tests) via PHPUnit 🧪
         run: vendor/bin/phpunit --no-coverage --disable-coverage-ignore
