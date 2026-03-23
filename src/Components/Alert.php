@@ -17,13 +17,13 @@ class Alert extends Component
     public string $type;
 
     /**
-     * @var \Illuminate\Contracts\Session\Session
+     * @var Session
      */
     protected $session;
 
     /**
-     * @param \Illuminate\Contracts\Session\Session $session
-     * @param string                                $type
+     * @param Session $session
+     * @param string  $type
      */
     public function __construct(Session $session, string $type = 'alert')
     {

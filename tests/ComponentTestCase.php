@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Cagilo\UI\Tests;
 
 use Cagilo\UI\CagiloServiceProvider;
+use Illuminate\Foundation\Application;
 use Orchestra\Testbench\TestCase;
 
 /**
@@ -20,7 +21,7 @@ abstract class ComponentTestCase extends TestCase
     }
 
     /**
-     * @param \Illuminate\Foundation\Application $app
+     * @param Application $app
      *
      * @return string[]
      */

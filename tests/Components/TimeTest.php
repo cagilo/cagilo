@@ -10,7 +10,7 @@ use Carbon\Carbon;
 class TimeTest extends ComponentTestCase
 {
     /**
-     * @var \Carbon\Carbon
+     * @var Carbon
      */
     protected $date;
 

@@ -12,7 +12,7 @@ use Illuminate\View\Component;
 class Time extends Component
 {
     /**
-     * @var \Carbon\Carbon
+     * @var Carbon
      */
     public $date;
 
@@ -27,9 +27,9 @@ class Time extends Component
     public $human;
 
     /**
-     * @param \DateTimeInterface $date
-     * @param string|null        $format
-     * @param bool               $human
+     * @param DateTimeInterface $date
+     * @param string|null       $format
+     * @param bool              $human
      */
     public function __construct(DateTimeInterface $date, ?string $format = null, bool $human = false)
     {
@@ -39,7 +39,7 @@ class Time extends Component
     }
 
     /**
-     * @return \Illuminate\Contracts\View\View
+     * @return View
      */
     public function render(): View
     {

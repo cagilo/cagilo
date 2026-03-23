@@ -13,7 +13,7 @@ class TestView
     /**
      * The original view.
      *
-     * @var \Illuminate\View\View
+     * @var View
      */
     protected $view;
 
@@ -27,7 +27,7 @@ class TestView
     /**
      * Create a new test view instance.
      *
-     * @param \Illuminate\View\View $view
+     * @param View $view
      *
      * @throws \Throwable
      *

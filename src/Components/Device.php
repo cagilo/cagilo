@@ -2,6 +2,7 @@
 
 namespace Cagilo\UI\Components;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use Illuminate\View\Component;
 use Jenssegers\Agent\Agent;
@@ -21,12 +22,12 @@ class Device extends Component
     /**
      * Create a new component instance.
      *
-     * @param \Jenssegers\Agent\Agent $agent
-     * @param false                   $desktop
-     * @param false                   $phone
-     * @param false                   $tablet
-     * @param false                   $robot
-     * @param false                   $other
+     * @param Agent $agent
+     * @param false $desktop
+     * @param false $phone
+     * @param false $tablet
+     * @param false $robot
+     * @param false $other
      *
      * @return void
      */
@@ -52,7 +53,7 @@ class Device extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
+     * @return View|\Closure|string
      */
     public function render()
     {

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Cagilo\UI\Tests\Components;
 
 use Cagilo\UI\Tests\ComponentTestCase;
+use Illuminate\Routing\Router;
 
 class LogoutTest extends ComponentTestCase
 {
@@ -13,7 +14,7 @@ class LogoutTest extends ComponentTestCase
      *
      * @api
      *
-     * @param \Illuminate\Routing\Router $router
+     * @param Router $router
      *
      * @return void
      */

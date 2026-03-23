@@ -31,7 +31,7 @@ class Error extends Component
     }
 
     /**
-     * @return \Illuminate\Contracts\View\View
+     * @return View
      */
     public function render(): View
     {
@@ -39,7 +39,7 @@ class Error extends Component
     }
 
     /**
-     * @param \Illuminate\Support\ViewErrorBag $errors
+     * @param ViewErrorBag $errors
      *
      * @return array
      */
