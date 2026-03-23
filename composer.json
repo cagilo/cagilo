@@ -24,7 +24,7 @@
         "jenssegers/agent": "<2.6.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^12.0",
+        "phpunit/phpunit": "^13.0",
         "vimeo/psalm": "^6.0",
         "mockery/mockery": "^1.4.2",
         "orchestra/testbench-core": "^10.0",
